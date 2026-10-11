@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 190" role="img" aria-label="Illustration of a solar panel kit"><defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#eef1ed"/></linearGradient></defs><rect width="240" height="190" rx="12" fill="url(#bg)"/><ellipse cx="120" cy="166" rx="79" ry="8" fill="#17365a" opacity=".09"/>
+<circle cx="189" cy="39" r="14" fill="#f4bc4d"/>
+<path d="M46 55h148v87H46z" fill="#17364f" stroke="#233f54" stroke-width="6" stroke-linejoin="round"/>
+<path d="M54 63h132v71H54z" fill="#2c5c77"/>
+<path d="M87 63v71m33-71v71m33-71v71M54 98h132" stroke="#9cc8d5" stroke-width="3"/>
+<path d="M46 142h148" stroke="#dce6e5" stroke-width="5"/>
+<path d="M77 144v18m86-18v18m-103 0h120" fill="none" stroke="#526b77" stroke-width="5" stroke-linecap="round"/>
+<rect x="176" y="124" width="29" height="31" rx="3" fill="#f0f1eb" stroke="#526b77" stroke-width="3"/>
+<path d="M182 136h17m-17 6h12" stroke="#a7b6b5" stroke-width="2"/></svg>

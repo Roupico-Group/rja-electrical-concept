@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 190" role="img" aria-label="Illustration of a brushed chrome plate switch"><defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#eef1ed"/></linearGradient></defs><rect width="240" height="190" rx="12" fill="url(#bg)"/><ellipse cx="120" cy="166" rx="79" ry="8" fill="#17365a" opacity=".09"/>
+<rect x="52" y="32" width="136" height="125" rx="8" fill="#c5cdcb" stroke="#435a69" stroke-width="5"/>
+<rect x="59" y="39" width="122" height="111" rx="4" fill="#e5e9e5" stroke="#fdfefa" stroke-width="3"/>
+<path d="M64 48h112M64 142h112" stroke="#b6c1be" stroke-width="2" opacity=".8"/>
+<rect x="94" y="58" width="52" height="74" rx="5" fill="#a9b6b4" stroke="#61777e" stroke-width="3"/>
+<path d="M99 65h42v28H99z" fill="#f6f8f4"/><path d="M99 96h42v30H99z" fill="#d3ddda"/>
+<path d="M100 95h40" stroke="#758b8d" stroke-width="3"/>
+<circle cx="68" cy="95" r="3" fill="#76898b"/><circle cx="172" cy="95" r="3" fill="#76898b"/></svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 190" role="img" aria-label="Illustration of a plug-in socket tester"><defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#eef1ed"/></linearGradient></defs><rect width="240" height="190" rx="12" fill="url(#bg)"/><ellipse cx="120" cy="166" rx="79" ry="8" fill="#17365a" opacity=".09"/>
+<path d="M99 143v15m42-15v15" stroke="#526b77" stroke-width="8" stroke-linecap="round"/>
+<rect x="75" y="34" width="90" height="116" rx="13" fill="#e87922" stroke="#344d60" stroke-width="5"/>
+<rect x="85" y="45" width="70" height="90" rx="7" fill="#283d4d"/>
+<rect x="91" y="54" width="58" height="31" rx="4" fill="#ecf1e8" stroke="#708791" stroke-width="2"/>
+<circle cx="101" cy="69" r="5" fill="#70b57b"/><circle cx="120" cy="69" r="5" fill="#f7bd4a"/><circle cx="139" cy="69" r="5" fill="#70b57b"/>
+<path d="M97 100h46m-39 10h32m-27 10h22" stroke="#9fb5b8" stroke-width="3" stroke-linecap="round"/>
+<path d="M88 37h64" stroke="#ffc276" stroke-width="3"/>
+</svg>

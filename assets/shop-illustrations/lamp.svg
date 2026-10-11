@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 190" role="img" aria-label="Illustration of GU10 LED bulbs"><defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#eef1ed"/></linearGradient></defs><rect width="240" height="190" rx="12" fill="url(#bg)"/><ellipse cx="120" cy="166" rx="79" ry="8" fill="#17365a" opacity=".09"/>
+<g opacity=".75"><path d="M45 70h44l-7 47H52z" fill="#eee9de" stroke="#526877" stroke-width="4"/><ellipse cx="67" cy="70" rx="22" ry="9" fill="#fff8df" stroke="#526877" stroke-width="4"/><rect x="56" y="117" width="22" height="12" rx="2" fill="#667884"/><path d="M61 129v9m12-9v9" stroke="#516473" stroke-width="4" stroke-linecap="round"/></g>
+<g opacity=".75"><path d="M151 70h44l-7 47h-30z" fill="#eee9de" stroke="#526877" stroke-width="4"/><ellipse cx="173" cy="70" rx="22" ry="9" fill="#fff8df" stroke="#526877" stroke-width="4"/><rect x="162" y="117" width="22" height="12" rx="2" fill="#667884"/><path d="M167 129v9m12-9v9" stroke="#516473" stroke-width="4" stroke-linecap="round"/></g>
+<path d="M92 62h56l-9 66h-38z" fill="#f5f2e9" stroke="#344e60" stroke-width="5" stroke-linejoin="round"/>
+<ellipse cx="120" cy="62" rx="28" ry="11" fill="#fff9e5" stroke="#344e60" stroke-width="5"/>
+<ellipse cx="120" cy="62" rx="17" ry="5" fill="#ffe5a0"/>
+<path d="M103 89h34m-31 13h28" stroke="#cad0cc" stroke-width="3"/>
+<rect x="106" y="128" width="28" height="14" rx="2" fill="#435a69"/><path d="M112 142v10m16-10v10" stroke="#435a69" stroke-width="5" stroke-linecap="round"/></svg>

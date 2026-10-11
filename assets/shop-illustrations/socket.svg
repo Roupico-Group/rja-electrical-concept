@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 190" role="img" aria-label="Illustration of a matt black double UK socket"><defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#eef1ed"/></linearGradient></defs><rect width="240" height="190" rx="12" fill="url(#bg)"/><ellipse cx="120" cy="166" rx="79" ry="8" fill="#17365a" opacity=".09"/>
+<rect x="27" y="44" width="186" height="104" rx="12" fill="#101b24" stroke="#3b5364" stroke-width="5"/>
+<rect x="34" y="51" width="172" height="90" rx="7" fill="#25333d" stroke="#566875" stroke-width="2"/>
+<path d="M44 57h150" stroke="#73838a" stroke-width="2" opacity=".6"/>
+<circle cx="75" cy="96" r="33" fill="#1b2933" stroke="#4e606b" stroke-width="2"/>
+<circle cx="165" cy="96" r="33" fill="#1b2933" stroke="#4e606b" stroke-width="2"/>
+<path d="M75 77v11m-19 20-5 9m43-9 5 9M165 77v11m-19 20-5 9m43-9 5 9" fill="none" stroke="#a9b4b9" stroke-width="6" stroke-linecap="round"/>
+<circle cx="40" cy="96" r="2.5" fill="#9ba8ad"/><circle cx="200" cy="96" r="2.5" fill="#9ba8ad"/></svg>

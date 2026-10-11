@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 190" role="img" aria-label="Illustration of mini cable trunking with a separate lid"><defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#eef1ed"/></linearGradient></defs><rect width="240" height="190" rx="12" fill="url(#bg)"/><ellipse cx="120" cy="166" rx="79" ry="8" fill="#17365a" opacity=".09"/>
+<path d="M30 112 191 45l21 8L51 120Z" fill="#f9faf6" stroke="#4b6576" stroke-width="4" stroke-linejoin="round"/>
+<path d="M38 112 191 49l13 5L51 117Z" fill="#c4ceca"/>
+<path d="M30 112v20l21 8v-20m0 0 161-67v20L51 140Z" fill="#eef2ed" stroke="#4b6576" stroke-width="4" stroke-linejoin="round"/>
+<path d="M51 126 204 63" fill="none" stroke="#a7b7b5" stroke-width="3"/>
+<path d="M23 84 183 18l24 9L47 93Z" fill="#fbfcf8" stroke="#4b6576" stroke-width="4" stroke-linejoin="round"/>
+<path d="M40 83 183 24" fill="none" stroke="#fff" stroke-width="3"/>
+<path d="M47 93v10" stroke="#4b6576" stroke-width="3" stroke-linecap="round"/>
+</svg>

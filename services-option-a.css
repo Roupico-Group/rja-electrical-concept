@@ -1,0 +1,23 @@
+/* The established hero remains untouched. This option changes service discovery. */
+body.services-option-a main{display:flex;flex-direction:column}
+.services-option-a .services-hero{order:1}
+.services-option-a .services-section{order:2;background:#f3f0ea;padding:70px 0 80px}
+.services-option-a .services-section .section-head{margin-bottom:25px}
+.services-option-a .sector-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:0}
+.services-option-a .sector-tab{min-height:58px;flex:1;min-width:175px;border:1px solid #d5ddde;border-bottom:0;border-radius:0;background:#e5e9e8;color:#274353;padding:16px 20px;text-align:left;font-size:17px;font-weight:800}
+.services-option-a .sector-tab[aria-selected="true"]{background:#fff;color:#963900;border-top:5px solid var(--orange);padding-top:12px}
+.services-option-a .sector-tab:hover:not([aria-selected="true"]){background:#f5f7f5}
+.services-option-a .sector-tab:focus-visible{position:relative;z-index:1;outline:3px solid var(--navy)}
+.services-option-a .sector-service-grid{display:block;border:1px solid #d5ddde;border-top:0;background:#fff;min-height:460px;padding:clamp(26px,4vw,55px)}
+.services-option-a .sector-service,.services-option-a .sector-service:first-child,.services-option-a .sector-service:last-child{display:grid;grid-template-columns:minmax(230px,.74fr) minmax(0,1.26fr);gap:clamp(25px,5vw,75px);padding:0;border:0}
+.services-option-a .sector-service[hidden]{display:none!important}
+.services-option-a .sector-service-head{min-height:0;border-left:5px solid var(--orange);padding-left:20px}
+.services-option-a .sector-service h3{font-size:clamp(46px,5vw,70px);line-height:.95;margin-bottom:15px}
+.services-option-a .sector-service-head p{font-size:15px;line-height:1.6;max-width:310px}
+.services-option-a .sector-service ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 22px;align-content:start}
+.services-option-a .sector-service li button{font-size:14px;padding:16px 0}
+.services-option-a .specialist-services{padding:25px 0 0;border:0}
+.services-option-a .emergency{order:3}.services-option-a .quote-section{order:4}.services-option-a .service-details{order:5;background:#fff}.services-option-a .trust-strip{order:6}
+.services-option-a .quote-grid{grid-template-columns:.75fr 1.25fr}
+@media(max-width:820px){.services-option-a .sector-service,.services-option-a .sector-service:first-child,.services-option-a .sector-service:last-child{grid-template-columns:1fr;gap:24px}.services-option-a .sector-service-grid{min-height:0}.services-option-a .sector-service ul{grid-template-columns:repeat(2,minmax(0,1fr))}.services-option-a .quote-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.services-option-a .sector-tab{min-width:0;font-size:13px;min-height:48px;padding:10px}.services-option-a .sector-tab[aria-selected="true"]{padding-top:6px}.services-option-a .sector-service-grid{padding:24px 19px}.services-option-a .sector-service h3{font-size:48px}.services-option-a .sector-service ul{grid-template-columns:1fr}}

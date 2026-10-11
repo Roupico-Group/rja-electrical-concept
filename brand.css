@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700&display=swap");
+
+:root {
+  --orange: #ff752a;
+  --font-display: "Newsreader", "Iowan Old Style", "Baskerville", Georgia, serif;
+}
+
+/* A transparent vector logo keeps the same RJA mark across every route. */
+.rja-logo {
+  display: block;
+  width: 94px;
+  height: auto;
+  flex: none;
+}
+
+.site-header,
+.site-top {
+  background: #ff752a;
+  border-bottom-color: #dc611d;
+}
+
+.site-header .site-switch {
+  background: #fff;
+  border-color: #fff;
+}
+
+.site-header .site-switch a,
+.site-header .header-blog {
+  color: var(--navy-deep);
+}
+
+.site-top .prompt,
+.site-top .prompt span {
+  color: #fff;
+}
+
+.site-header .site-switch a[aria-current="page"],
+.site-header .nav-pill.orange {
+  background: var(--navy-deep);
+  border-color: var(--navy-deep);
+  color: #fff;
+}
+
+.site-header .site-switch a:not([aria-current]):hover,
+.site-header .header-blog:hover,
+.site-header .header-blog[aria-current="page"] {
+  color: var(--navy-deep);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.site-header .nav-pill.orange:hover {
+  background: #07182c;
+  border-color: #07182c;
+}
+
+.site-header .emergency-header-link {
+  background: #fff;
+  border-color: #fff;
+  color: #8e2c17;
+}
+
+.site-header .emergency-header-link:hover,
+.site-header .emergency-header-link:focus-visible {
+  background: #fff4eb;
+  border-color: #fff4eb;
+  color: #75210e;
+}
+
+h1, h2, h3,
+.emergency strong,
+.shop-service-link strong {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -.035em;
+}
+
+.route h2 {
+  letter-spacing: -.045em;
+}
+
+@media (max-width: 560px) {
+  .rja-logo {
+    width: 82px;
+  }
+}
+
+#shop, #services, #quote { scroll-margin-top: 104px; }
+@media (max-width: 820px) { #shop, #services, #quote { scroll-margin-top: 145px; } }
