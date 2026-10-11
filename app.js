@@ -182,43 +182,14 @@
   }
 
   if (page === 'services') {
-    const groups = document.getElementById('sector-service-groups');
-    const moreServices = document.getElementById('more-service-links');
     const selector = document.getElementById('service-select');
     const photos = document.getElementById('service-photos');
     const photoStatus = document.getElementById('photo-status');
     const photoPreview = document.getElementById('photo-preview');
     let previewUrls = [];
-    const serviceGroups = [
-      {
-        title: 'Commercial',
-        intro: 'Electrical systems, safety and maintenance for business premises and managed property.',
-        names: ['EICRs & electrical certificates', 'PAT testing', 'Fire alarm systems', 'Emergency lighting', 'CCTV systems', 'Planned maintenance & repairs', 'EV charger installation', 'Solar installations']
-      },
-      {
-        title: 'Industrial',
-        intro: 'Installation, inspection and upkeep for demanding sites and specialist environments.',
-        names: ['Inspection & testing', 'Electrical installation & rewires', 'Planned maintenance & repairs', 'Fire alarm systems', 'Emergency lighting', 'Hazardous area electrical work', 'Street lighting & access']
-      },
-      {
-        title: 'Domestic',
-        intro: 'Electrical and property work for homeowners, landlords and residential buildings.',
-        names: ['EICRs & electrical certificates', 'Landlord certificates', 'Electrical installation & rewires', 'EV charger installation', 'Solar installations', 'EPC certificates', 'Mould & condensation surveys', 'Loft insulation']
-      }
-    ];
-    const specialistNames = ['Part F ventilation testing', 'Asbestos surveys'];
     selector.innerHTML += services.map(service => `<option>${service.name}</option>`).join('') + '<option>Something else</option>';
-    groups.innerHTML = serviceGroups.map(group => `<section class="sector-service" aria-label="${group.title} services"><div class="sector-service-head"><h3>${group.title}</h3><p>${group.intro}</p></div><ul>${group.names.map(name => `<li><button type="button" data-service="${name}">${name}<span aria-hidden="true">→</span></button></li>`).join('')}</ul></section>`).join('');
-    moreServices.innerHTML = specialistNames.map(name => `<button type="button" data-service="${name}">${name}<span aria-hidden="true">→</span></button>`).join('');
-    function selectService(event) {
-      const button = event.target.closest('[data-service]');
-      if (!button) return;
-      selector.value = button.dataset.service;
-      document.getElementById('quote').scrollIntoView({ behavior: 'smooth' });
-      selector.focus({ preventScroll: true });
-    }
-    groups.addEventListener('click', selectService);
-    moreServices.addEventListener('click', selectService);
+    const requestedService = new URLSearchParams(window.location.search).get('service');
+    if (requestedService && services.some(service => service.name === requestedService)) selector.value = requestedService;
     document.querySelectorAll('[data-detail-service]').forEach(link => {
       link.addEventListener('click', () => { selector.value = link.dataset.detailService; });
     });

@@ -10,6 +10,9 @@
 .detail-card li{padding:3px 0}
 .detail-cta{display:inline-flex;align-items:center;min-height:39px;padding:9px 13px;background:var(--navy);color:#fff;text-decoration:none;font-size:12px;font-weight:800;border-radius:3px}
 .detail-cta:hover,.detail-cta:focus-visible{background:var(--orange-dark)}
+.sector-service li a,.specialist-service-list a{width:100%;display:flex;align-items:center;min-height:50px;padding:15px 0;text-align:left;font-size:13px;font-weight:700;line-height:1.35;color:#304d61;text-decoration:none}
+.sector-service li a:hover,.sector-service li a:focus-visible,.specialist-service-list a:hover,.specialist-service-list a:focus-visible{color:var(--orange-dark);text-decoration:underline;text-underline-offset:4px}
+.specialist-service-list a{border-bottom:1px solid var(--line)}
 .source-link{display:block;width:max-content;max-width:100%;margin-top:12px;color:#536a78;font-size:11px;text-decoration:underline;text-underline-offset:2px}
 .trust-strip{background:#f5f2ed;padding:45px 0 35px;border-top:1px solid var(--line)}
 .trust-heading{margin-bottom:20px}
