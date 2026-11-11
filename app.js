@@ -51,9 +51,12 @@
   const currency = value => `£${value.toFixed(2)}`;
 
   if (page === 'wholesale') {
+    const shopView = document.body.dataset.shopView || 'home';
     const search = document.getElementById('shop-search');
     const categories = document.getElementById('shop-categories');
     const grid = document.getElementById('products');
+    const sort = document.getElementById('shop-sort');
+    const params = new URLSearchParams(window.location.search);
     let storage = null;
     try {
       storage = window.sessionStorage;
@@ -71,6 +74,38 @@
     const dialog = document.getElementById('cart-dialog');
     const accountDialog = document.getElementById('account-dialog');
     const allCategories = ['All', 'Indoor lighting', 'Outdoor lighting', 'Wiring accessories', 'Cable & containment', 'Safety & protection', 'Solar & energy', 'Bulbs', 'LED flex', 'Heaters', 'Tools & testing'];
+    if (shopView === 'catalogue') {
+      const requestedCategory = params.get('category');
+      if (allCategories.includes(requestedCategory)) selected = requestedCategory;
+      search.value = params.get('q') || '';
+      if (['name', 'price-asc', 'price-desc'].includes(params.get('sort'))) sort.value = params.get('sort');
+    }
+
+    function words(value) {
+      return String(value).toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
+        .match(/[a-z0-9]+/g)?.map(word => {
+          if (word.endsWith('ies') && word.length > 4) return `${word.slice(0, -3)}y`;
+          if (word.endsWith('es') && /(ches|shes|xes|zes)$/.test(word)) return word.slice(0, -2);
+          if (word.endsWith('s') && !word.endsWith('ss') && word.length > 3) return word.slice(0, -1);
+          return word;
+        }) || [];
+    }
+    const aliases = { outlet: 'socket', receptacle: 'socket', fuse: 'breaker', cable: 'cable', light: 'lighting' };
+    function matchesSearch(product, term) {
+      const query = words(term).map(word => aliases[word] || word);
+      if (!query.length) return true;
+      const haystack = words(`${product.name} ${product.category} ${product.description}`);
+      return query.every(word => haystack.some(candidate => candidate === word || candidate.startsWith(word)));
+    }
+    function syncCatalogueUrl() {
+      if (shopView !== 'catalogue') return;
+      const next = new URL(window.location.href);
+      for (const key of ['q', 'category', 'sort']) next.searchParams.delete(key);
+      if (search.value.trim()) next.searchParams.set('q', search.value.trim());
+      if (selected !== 'All') next.searchParams.set('category', selected);
+      if (sort.value !== 'featured') next.searchParams.set('sort', sort.value);
+      window.history.replaceState(null, '', `${next.pathname}${next.search}${next.hash}`);
+    }
 
     function startGuestSession() {
       if (guestSession) return;
@@ -84,13 +119,20 @@
     if (cart.size && !guestSession) startGuestSession();
 
     function renderCategories() {
+      if (!categories) return;
       categories.innerHTML = allCategories.map(name => `<button type="button" class="chip" data-category="${name}" aria-pressed="${selected === name}">${name}</button>`).join('');
     }
     function renderProducts() {
-      const term = search.value.trim().toLowerCase();
-      const visible = products.filter(product => (selected === 'All' || product.category === selected) && (!term || `${product.name} ${product.category} ${product.description}`.toLowerCase().includes(term)));
-      document.getElementById('shop-count').textContent = `${visible.length} ${visible.length === 1 ? 'product' : 'products'}`;
-      grid.innerHTML = visible.length ? visible.map(product => `<article class="product"><div class="product-art" style="--art-bg:${product.colour}"><img src="assets/shop-illustrations/${product.id}.svg" alt="" width="240" height="190" loading="lazy"></div><div class="product-info"><span class="product-category">${product.category}</span><h3>${product.name}</h3><div class="product-bottom"><div class="product-price">${currency(product.price)}</div><button class="add" type="button" data-add="${product.id}" aria-label="Add ${product.name} to cart">+</button></div></div></article>`).join('') : '<div class="empty-state">No sample products match. Try another search or category.</div>';
+      if (!grid) return;
+      const term = search?.value.trim() || '';
+      let visible = products.filter(product => (selected === 'All' || product.category === selected) && matchesSearch(product, term));
+      if (shopView === 'home') visible = visible.slice(0, 4);
+      if (sort?.value === 'name') visible.sort((a, b) => a.name.localeCompare(b.name));
+      if (sort?.value === 'price-asc') visible.sort((a, b) => a.price - b.price);
+      if (sort?.value === 'price-desc') visible.sort((a, b) => b.price - a.price);
+      document.getElementById('shop-count').textContent = `${visible.length} ${visible.length === 1 ? 'product' : 'products'}${shopView === 'home' ? ' featured' : ' found'}`;
+      grid.innerHTML = visible.length ? visible.map(product => `<article class="product"><div class="product-art" style="--art-bg:${product.colour}"><img src="assets/shop-illustrations/${product.id}.svg?v=3" alt="" width="240" height="190" loading="lazy"></div><div class="product-info"><span class="product-category">${product.category}</span><h3>${product.name}</h3><div class="product-bottom"><div class="product-price">${currency(product.price)}</div><button class="add" type="button" data-add="${product.id}" aria-label="Add ${product.name} to cart">+</button></div></div></article>`).join('') : '<div class="empty-state">No sample products match. Try another search or category.</div>';
+      syncCatalogueUrl();
     }
     function renderCart() {
       const lines = [...cart.entries()].map(([id, qty]) => ({ product: products.find(item => item.id === id), qty }));
@@ -122,31 +164,29 @@
       document.body.classList.remove('no-scroll');
       priorFocus?.focus();
     }
-    categories.addEventListener('click', event => {
+    categories?.addEventListener('click', event => {
       const button = event.target.closest('[data-category]');
       if (!button) return;
       selected = button.dataset.category;
       renderCategories();
       renderProducts();
     });
-    search.addEventListener('input', () => {
+    search?.addEventListener('input', () => {
       const heroInput = document.getElementById('shop-hero-search');
       if (heroInput) heroInput.value = search.value;
       renderProducts();
     });
     const heroSearch = document.getElementById('shop-hero-search');
-    heroSearch?.addEventListener('input', () => {
-      search.value = heroSearch.value;
+    sort?.addEventListener('change', renderProducts);
+    document.getElementById('shop-clear')?.addEventListener('click', () => {
+      search.value = '';
       selected = 'All';
+      sort.value = 'featured';
       renderCategories();
       renderProducts();
+      search.focus();
     });
-    document.getElementById('shop-hero-search-form')?.addEventListener('submit', event => {
-      event.preventDefault();
-      document.getElementById('shop').scrollIntoView({ behavior: 'smooth' });
-      search.focus({ preventScroll: true });
-    });
-    grid.addEventListener('click', event => {
+    grid?.addEventListener('click', event => {
       const button = event.target.closest('[data-add]');
       if (!button) return;
       const id = button.dataset.add;

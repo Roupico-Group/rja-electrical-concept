@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 190" role="img" aria-label="Illustrative drawing of an electrical product"><defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#eef1ed"/></linearGradient></defs><rect width="240" height="190" rx="12" fill="url(#bg)"/><ellipse cx="120" cy="168" rx="76" ry="8" fill="#17365a" opacity=".09"/><ellipse cx="120" cy="130" rx="75" ry="17" fill="#d8d9d3"/><path d="M64 73q4-32 56-32t56 32l-13 46q-4 12-43 12t-43-12z" fill="#e9ece8" stroke="#314759" stroke-width="5"/><ellipse cx="120" cy="75" rx="55" ry="24" fill="#fff" stroke="#71828a" stroke-width="4"/><ellipse cx="120" cy="76" rx="40" ry="14" fill="#ffe7a8"/><path d="M88 140v12m64-12v12" stroke="#314759" stroke-width="4"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 190" role="img" aria-label="Fire rated recessed LED downlight illustration">
+<defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#eef1ed"/></linearGradient><linearGradient id="lens" x2="0" y2="1"><stop stop-color="#fff8df"/><stop offset="1" stop-color="#ffe2a0"/></linearGradient></defs>
+<rect width="240" height="190" rx="12" fill="url(#bg)"/><ellipse cx="120" cy="166" rx="74" ry="8" fill="#17365a" opacity=".1"/>
+<path d="M88 74V43q0-11 12-11h40q12 0 12 11v31" fill="#d9e1df" stroke="#506a78" stroke-width="4"/>
+<path d="M96 42h48M95 53h50M100 64h40" stroke="#a7b9bd" stroke-width="3"/><path d="M86 65 69 54l-11 15m96-4 17-11 11 15" fill="none" stroke="#5f7882" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M56 69q4 43 20 61 16 17 44 17t44-17q16-18 20-61" fill="#e5ebe8" stroke="#3f5b6b" stroke-width="4"/>
+<ellipse cx="120" cy="124" rx="69" ry="31" fill="#fdfefa" stroke="#486273" stroke-width="5"/><ellipse cx="120" cy="124" rx="51" ry="21" fill="url(#lens)" stroke="#cbd4cf" stroke-width="3"/>
+<path d="M73 115q47-25 95 0" fill="none" stroke="#fff" stroke-width="3" opacity=".8"/>
+</svg>

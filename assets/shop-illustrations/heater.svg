@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 190" role="img" aria-label="Illustrative drawing of an electrical product"><defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#eef1ed"/></linearGradient></defs><rect width="240" height="190" rx="12" fill="url(#bg)"/><ellipse cx="120" cy="168" rx="76" ry="8" fill="#17365a" opacity=".09"/><rect x="50" y="25" width="140" height="140" rx="7" fill="#f5f4f0" stroke="#354f64" stroke-width="5"/><path d="M68 42v105m18-105v105m18-105v105m18-105v105m18-105v105m18-105v105" stroke="#c1cbc9" stroke-width="5"/><path d="M154 43h20v14h-20z" fill="#f47721"/><path d="M66 166v9m109-9v9" stroke="#354f64" stroke-width="5"/><path d="M83 16q-8-9 0-17m36 17q-8-9 0-17m36 17q-8-9 0-17" fill="none" stroke="#eda965" stroke-width="4" stroke-linecap="round"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 190" role="img" aria-label="Slim electric panel heater illustration">
+<defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#eef1ed"/></linearGradient><linearGradient id="panel" x2="0" y2="1"><stop stop-color="#fafbf8"/><stop offset="1" stop-color="#dfe6e3"/></linearGradient></defs>
+<rect width="240" height="190" rx="12" fill="url(#bg)"/><ellipse cx="120" cy="167" rx="76" ry="8" fill="#17365a" opacity=".1"/>
+<rect x="34" y="55" width="172" height="95" rx="6" fill="url(#panel)" stroke="#40586a" stroke-width="5"/><path d="M42 68h156" stroke="#fff" stroke-width="3"/>
+<path d="M49 78h142m-142 7h142" stroke="#a8b9b8" stroke-width="3" stroke-linecap="round"/>
+<rect x="172" y="101" width="21" height="29" rx="3" fill="#d3dcd9" stroke="#6d8289" stroke-width="2"/><circle cx="183" cy="110" r="3" fill="#f47721"/><path d="M178 118h10" stroke="#718790" stroke-width="2"/>
+<path d="M54 150v10m132-10v10" stroke="#435b6b" stroke-width="5" stroke-linecap="round"/><path d="M64 160h112" stroke="#dce3e0" stroke-width="3"/>
+</svg>

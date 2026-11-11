@@ -55,3 +55,8 @@
 .hero-product-search button:hover{background:#ff9a5d}
 .cart-quote-hint{font-weight:700;color:var(--navy);font-size:12px}
 @media(max-width:560px){.hero-product-search>div{flex-direction:column}.hero-product-search button{min-height:44px}}
+.featured-catalogue .section-head{display:flex;justify-content:space-between;align-items:end;gap:20px}
+.featured-catalogue .section-head .btn{flex:none}
+.featured-catalogue .catalogue-disclosure{margin:7px 0 0}
+.catalogue-full-link{font-size:12px;font-weight:800;color:var(--orange-dark);text-decoration:underline;text-underline-offset:3px}
+@media(max-width:650px){.featured-catalogue .section-head{align-items:flex-start;flex-direction:column}}
