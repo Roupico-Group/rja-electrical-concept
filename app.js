@@ -99,6 +99,10 @@
       document.getElementById('cart-total').textContent = currency(lines.reduce((sum, line) => sum + line.product.price * line.qty, 0));
       document.getElementById('cart-next').disabled = !lines.length;
       document.getElementById('shop-session-status').textContent = guestSession ? 'Guest session active' : 'Guest cart';
+      const quoteHint = document.getElementById('cart-quote-hint');
+      if (quoteHint) quoteHint.textContent = lines.length
+        ? 'Ready to ask about this basket? Request a quote without creating an account.'
+        : 'Add products to build a basket and request a quote.';
       persistCart();
     }
     function openLayer(element) {
@@ -125,7 +129,23 @@
       renderCategories();
       renderProducts();
     });
-    search.addEventListener('input', renderProducts);
+    search.addEventListener('input', () => {
+      const heroInput = document.getElementById('shop-hero-search');
+      if (heroInput) heroInput.value = search.value;
+      renderProducts();
+    });
+    const heroSearch = document.getElementById('shop-hero-search');
+    heroSearch?.addEventListener('input', () => {
+      search.value = heroSearch.value;
+      selected = 'All';
+      renderCategories();
+      renderProducts();
+    });
+    document.getElementById('shop-hero-search-form')?.addEventListener('submit', event => {
+      event.preventDefault();
+      document.getElementById('shop').scrollIntoView({ behavior: 'smooth' });
+      search.focus({ preventScroll: true });
+    });
     grid.addEventListener('click', event => {
       const button = event.target.closest('[data-add]');
       if (!button) return;
@@ -166,10 +186,12 @@
     document.getElementById('cart-form').addEventListener('submit', event => {
       event.preventDefault();
       const form = event.currentTarget;
-      const name = String(new FormData(form).get('name') || '').trim();
+      const details = new FormData(form);
+      const name = String(details.get('name') || '').trim();
+      const fulfilment = String(details.get('fulfilment') || 'collection or delivery');
       form.hidden = true;
       const message = document.getElementById('cart-success');
-      message.textContent = `Demo preview complete, ${name}. A real RJA shop could review the cart, check stock and reply with the correct specification and price. Your contact details were not sent or saved.`;
+      message.textContent = `Quote preview ready, ${name}. In a live shop, RJA would review the ${cart.size} product ${cart.size === 1 ? 'line' : 'lines'}, confirm stock and pricing, then reply about ${fulfilment.toLowerCase()}. No request was sent and your contact details were not saved.`;
       message.hidden = false;
     });
     overlay.addEventListener('click', closeLayers);

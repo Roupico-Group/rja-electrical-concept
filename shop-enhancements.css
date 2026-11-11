@@ -47,3 +47,11 @@
 
 .catalogue-disclosure{margin:0 0 18px}
 .fulfilment-source{margin-top:14px}
+.hero-product-search{max-width:560px;margin-top:26px}
+.hero-product-search label{display:block;margin-bottom:8px;color:#fff;font-size:13px;font-weight:700}
+.hero-product-search>div{display:flex;gap:8px}
+.hero-product-search input{min-width:0;flex:1;padding:13px 15px;border:2px solid #fff;border-radius:4px;font:inherit;color:var(--navy);background:#fff}
+.hero-product-search button{border:0;border-radius:4px;padding:0 20px;background:var(--orange);color:var(--navy);font:inherit;font-weight:800;cursor:pointer}
+.hero-product-search button:hover{background:#ff9a5d}
+.cart-quote-hint{font-weight:700;color:var(--navy);font-size:12px}
+@media(max-width:560px){.hero-product-search>div{flex-direction:column}.hero-product-search button{min-height:44px}}

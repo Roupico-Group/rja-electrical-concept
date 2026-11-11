@@ -40,6 +40,19 @@
 @media(max-width:820px){.hero-emergency-call{display:block;margin:13px 0 0}.detail-grid{grid-template-columns:1fr}.trust-items{grid-template-columns:1fr;gap:17px}}
 @media(max-width:560px){.hero-emergency-call{font-size:12px}.detail-card{padding:20px;scroll-margin-top:170px}.callback-fields{grid-template-columns:1fr}.callback-fields label:last-child{grid-column:auto}}
 
+.job-pathways{background:#fff;padding:68px 0}
+.job-pathways .section-head{margin-bottom:24px}
+.job-pathways .section-head p{max-width:640px;margin:8px 0 0;color:#526572;font-size:13px}
+.job-pathway-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.job-pathway-grid article{padding:24px;border:1px solid #dce4e6;border-top:4px solid var(--orange);background:#f8faf9}
+.job-pathway-grid span{color:var(--orange-dark);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em}
+.job-pathway-grid h3{margin:10px 0;color:var(--navy);font-size:20px}
+.job-pathway-grid p{min-height:82px;margin:0 0 16px;color:#526572;font-size:13px;line-height:1.55}
+.job-pathway-grid a{color:var(--navy);font-size:12px;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.job-pathways-foot{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:23px}
+.job-pathways-foot p{max-width:650px;margin:0;color:#526572;font-size:13px}
+@media(max-width:820px){.job-pathway-grid{grid-template-columns:1fr}.job-pathway-grid p{min-height:0}.job-pathways-foot{align-items:flex-start;flex-direction:column}}
+
 /* The service hero fills the first screen below the shared site chrome. */
 .services-hero{min-height:max(680px,calc(100svh - 149px));display:flex;align-items:stretch;isolation:isolate}
 .services-hero::after{display:none}
